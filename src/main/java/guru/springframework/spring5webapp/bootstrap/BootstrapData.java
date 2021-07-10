@@ -7,7 +7,6 @@ import guru.springframework.spring5webapp.repositories.AuthorRepository;
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import guru.springframework.spring5webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -31,7 +30,8 @@ public class BootstrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Publisher publisher = new Publisher("test address", "test city", "test state", "test zipCode");
+        Publisher publisher = new Publisher("Test Publisher", "test address", "test city",
+                "test state", "test zipCode");
         publisherRepository.save(publisher);
 
         Author eric = new Author("Eric", "Evans");

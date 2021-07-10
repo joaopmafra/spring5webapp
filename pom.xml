@@ -11,6 +11,7 @@
 	<name>spring5webapp</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#project-inheritance -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -24,6 +25,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<!-- https://stackoverflow.com/questions/58790750/why-you-dont-need-to-specify-the-version-for-some-dependencies-in-spring-boot-p -->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,7 +43,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
